@@ -16,6 +16,7 @@ export default function App() {
     try {
       const saved = JSON.parse(localStorage.getItem('tasks'));
       const taskList = saved?.tasks || [];
+      setTasks(taskList);
     } catch (err) {
       console.error('Failed to parse tasks from localStorage', err);
       setTasks([]);
